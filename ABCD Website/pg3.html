@@ -1,0 +1,168 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<title>Rabdi Ladoo</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+$(document).ready(function(){
+$('#button').click(function()
+{$('#ff').toggle('fast');
+});
+
+$('h1').mouseenter(function()
+{$(this).css({"backgroundColor":"aqua"});
+});
+$('h1').mouseleave(function()
+{$(this).css({"backgroundColor":"#F5B7B1"});
+});
+$('pre').mouseenter(function()
+{$(this).css({"backgroundColor":"aqua"});
+});
+$('pre').mouseleave(function()
+{$(this).css({"backgroundColor":"white"});
+});
+$('#img').mouseenter(function(){
+$(this).css({"border":" 5px solid brown"});
+});
+$('#img').click(function(){
+$(this).animate({width:'+=50px',height:'+=50px'});
+});
+$('#pp').hover(function(){
+$('#dd').show('slow');
+});
+$('.form-control').mouseenter(function(){
+$(this).css({'backgroundColor':'lightblue'});
+});
+$('.form-control').mouseleave(function(){
+$(this).css({'backgroundColor':'LemonChiffon '});
+});
+});
+</script>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
+</script>
+<style>
+body{background-color:#F5B7B1;}
+#dd{display:none;}
+#ff{width:80%; background-color:orange; display:none; border:brown 8px double;}
+#alert{display:none;}
+#alert2{display:none;}
+</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<h2><span class="label label-primary">{{theTime}}</span></h2>
+<div class="jumbotron">
+<h1><marquee direction="left">RABDI MOTICHOOR LADDOO SHOTS-Fusion Indian Dessert</marquee></h1></div>
+<img src="http://indraniskitchenflavours.com/wp-content/uploads/2016/10/Rabdi-motichur-ladoo-parfait.jpg" alt="Rabdi Laddoo Shots" width="300" height="250"
+border="3 black" id="img" class="img-rounded">
+<br><br>
+<pre><u><b>What does it taste like?</b></u>
+                   =>Laddo, rabri and cream all in one platter is indeed a delight to taste.</pre>
+<pre><u><b>Ingredients</b></u>
+                        Motichoor Laddus- 10 (used one laddu per shot glass)
+                        Rabdi- 5 small earthen bowls(used 1 bowl for two shot glasses)
+                        Chopped dry fruits- 2/3rd cup
+                        1.25 litres milk
+                        sugar
+                        cardamoms
+                        saffron strands
+                        rosewater
+                        mawa(khoya)
+                        pistachios
+                        raisins</pre>
+<pre><u><b>Method of Preparation:</b></u>
+                        1. Take a deep bottomed pan and add the milk. Bring it to a boil. Keep the flame low. Continue to boil the milk till it is reduced to half. You must
+                            take full cream milk for this recipe as it is richer.
+                        2. Finely grate the mawa or khoya and add to the milk. It is very important to grate the mawa in a way, no lumps remain or the taste of the rabri will
+                            be spoilt. You must keep the flame low and stir continuously as milk has a tendency to stick at the bottom and there are chances of its getting 
+                            burnt. This not only spoils the taste of this dessert recipe but also makes it look unappetizing with black burnt milk surfacing on top.
+                        3. Now add the sugar and green cardamom powder and simmer till the sugar is completely dissolved. Keep the flame low and mix continuously 
+                            with a ladle. Once the milk is thick enough, switch off the flame and allow it to cool. Dissolve saffron in one tablespoon of milk and pour into 
+                            the rabri. You can add chopped nuts of your choice at this point. Add rose water and stir well.
+                        4. Keep aside to cool and refrigerate. Serve in an attractive glass or silver bowl garnished with the nuts of your choice.</pre>
+<pre><b>Preparation Time:</b> 15 minutes
+    <b>Cooking Time:</b> 85 minutes
+          <b>Serves:</b> 10</pre>
+<div class="btn-group">
+  <button type="button" class="btn btn-success" id="button">Feedback<span class="glyphicon glyphicon-pencil"></span></button>
+  
+  <div class="btn-group">
+    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+    Go to <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="contents.html">Contents <span class="glyphicon glyphicon-th-list"></span></a></li>
+      <li><a href="login.html">Login page <span class="glyphicon glyphicon-log-in"></span></a></li>
+<li><a href="form.html">Subsciption page <span class="glyphicon glyphicon-bell"></span></a></li>
+    </ul>
+  </div>
+</div>
+<center><br><br>
+<div class="container" id="ff">
+<div class="form-group">
+<h1><u><b>Feedback Form</b></u></h1>
+<br>
+    <label class="control-label col-sm-2" for="name">Full Name: <span class="glyphicon glyphicon-pencil"></span></label>
+    <div class="col-sm-10">
+      <input type="text" ng-model="name" class="form-control" id="name" placeholder="Enter full name">
+    </div>
+  </div><br><br>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email: <span class="glyphicon glyphicon-envelope"></span></label>
+    <div class="col-sm-10">
+      <input type="email" ng-model="email" class="form-control" id="email" placeholder="Enter email">
+    </div><br><br>
+  </div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="name">Upload a file: <span class="glyphicon glyphicon-upload"></span></label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" id="file">
+    </div>
+  </div><br><br>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="comments">Enter comments: <span class="glyphicon glyphicon-comment"></span></label>
+    <div class="col-sm-10">
+      <textarea rows="8" cols="20" ng-model="comm" class="form-control" id="comm" placeholder="Enter your comments..."></textarea><br>
+    </div><br><br>
+  </div>
+
+<a href="#" ng-disabled="!name || !email || !comm" class=" btn btn-success form-control">Submit Feedback <span class="glyphicon glyphicon-ok"></span></a>
+     <br><br> </div></center><br><br><br>
+<div class="alert alert-success alert-dismissible" id="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Form submitted successfully!</div>
+<div class="alert alert-danger alert-dismissible" id="alert2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Complete all the details!</div>
+<br><br>
+<center>
+<a href="#" id="pp" data-toggle="tooltip" data-placement="top" title="Yay !!! You've completed 60% :)">See your progress <span class="glyphicon glyphicon-check"></span></a>
+<div style="width:90%" id="dd">
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-success active" role="progressbar" style="width:60%">
+    60%
+  </div></div></div></center>
+<br><br>
+<center><div class="pagination">
+<ul class="pagination">
+  <li><a href="pg1.html">1</a></li>
+  <li><a href="pg2.html">2</a></li>
+  <li class="active"><a href="#">3</a></li>
+  <li><a href="pg4.html">4</a></li>
+  <li><a href="pg5.html">5</a></li>
+</ul></div></center>
+
+</body>
+</html>               
+

@@ -1,0 +1,171 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<title>Strawberry Tart</title>
+<script>
+function abc()
+{window.alert("Thankyou for your feedback!");}
+</script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+$(document).ready(function(){
+$('#button').click(function()
+{$('#ff').toggle('fast');
+});
+
+$('h1').mouseenter(function()
+{$(this).css({"backgroundColor":"orange"});
+});
+$('h1').mouseleave(function()
+{$(this).css({"backgroundColor":"#EBDEF0"});
+});
+$('pre').mouseenter(function()
+{$(this).css({"backgroundColor":"orange"});
+});
+$('pre').mouseleave(function()
+{$(this).css({"backgroundColor":"white"});
+});
+$('#img').mouseenter(function(){
+$(this).css({"border":" 5px solid purple"});
+});
+$('#img').click(function(){
+$(this).animate({width:'+=50px',height:'+=50px'});
+});
+$('#pp').hover(function(){
+$('#dd').show('slow');
+});
+$('.form-control').mouseenter(function(){
+$(this).css({'backgroundColor':'lightblue'});
+});
+$('.form-control').mouseleave(function(){
+$(this).css({'backgroundColor':'LemonChiffon '});
+});
+});
+</script>
+
+<style>
+#f4{background-color:pink;}
+body{background-color:#EBDEF0;}
+#dd{display:none;}
+#ff{width:80%; background-color:orange; display:none; border:brown 8px double;}
+#alert{display:none;}
+#alert2{display:none;}
+</style>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
+</script>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<h2><span class="label label-warning">{{theTime}}</span></h2>
+<div class="jumbotron">
+<h1><marquee direction="left">BROWN SUGAR STRAWBERRY TART</marquee></h1></div>
+<img src="https://cdn-image.myrecipes.com/sites/default/files/styles/medium_2x/public/image/recipes/su/10/04/strawberry-tart-su-x.jpg?itok=hHRqTErK" 
+alt="Strawberry Tart" width="250" height="200" border="3 black" id="img" class="img-rounded">
+<br><br>
+<pre><u><b>What does it taste like></b></u>
+                   =>The combination of the brown sugar crust, creamy filling and sweet fruit topping make this the perfect summertime treat.</pre>
+<pre><u><b>Ingredients</b></u>
+                        1 cup flour 
+                        1/4 cup packed dark brown sugar, divided 
+                        1 tablespoon cornstarch 
+                        1/8 teaspoon salt 
+                        1/2 cup cold unsalted butter, cut into pieces 
+                        1 teaspoon vanilla extract, divided 
+                        1/2 cup creme frache 
+                        1/2 cup whipping cream 
+                        12 ounces strawberries, hulled and sliced</pre>
+<pre><u><b>Method of Preparation</b></u>
+                       1. Preheat oven to 350. In a food processor, whirl flour, 2 tbsp. sugar, the cornstarch, and salt until combined. Add butter and 1/2 tsp. vanilla and 
+                           pulse until fine crumbs form and dough just begins to come together. Press evenly into bottom and up sides of a 9-in. round tart pan with a 
+                           removable rim.
+                       2. Bake until edges are golden, 20 to 22 minutes. Let cool on a rack, then gently push tart crust from pan rim; set on a plate.
+                       3. In a bowl with a mixer on high speed, beat creme frache, cream, remaining 2 tbsp. sugar, and remaining 1/2 tsp. vanilla until thick. Spread in 
+                           cooled crust. Arrange strawberries in circles on top, alternating cut sides down and up.
+                       4. Make ahead: Chill, loosely covered, up to 4 hours.</pre>
+<pre><b>Preparation Time:</b> 30 minutes
+    <b>Cooking Time:</b> 25 minutes
+          <b>Serves:</b> 8</pre>
+<div class="btn-group">
+  <button type="button" class="btn btn-success" id="button">Feedback<span class="glyphicon glyphicon-pencil"></span></button>
+  
+  <div class="btn-group">
+    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+    Go to <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="contents.html">Contents <span class="glyphicon glyphicon-th-list"></span></a></li>
+      <li><a href="login.html">Login page <span class="glyphicon glyphicon-log-in"></span></a></li>
+<li><a href="form.html">Subsciption page <span class="glyphicon glyphicon-bell"></span></a></li>
+    </ul>
+  </div>
+</div>
+<center>
+<br><br>
+<div class="container" id="ff">
+<div class="form-group">
+<h1><u><b>Feedback Form</b></u></h1>
+<br>
+    <label class="control-label col-sm-2" for="name">Full Name: <span class="glyphicon glyphicon-pencil"></span></label>
+    <div class="col-sm-10">
+      <input type="text" ng-model="name" class="form-control" id="name" placeholder="Enter full name">
+    </div>
+  </div><br><br>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email: <span class="glyphicon glyphicon-envelope"></span></label>
+    <div class="col-sm-10">
+      <input type="email" ng-model="email" class="form-control" id="email" placeholder="Enter email">
+    </div><br><br>
+  </div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="name">Upload a file: <span class="glyphicon glyphicon-upload"></span></label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" id="file">
+    </div>
+  </div><br><br>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="comments">Enter comments: <span class="glyphicon glyphicon-comment"></span></label>
+    <div class="col-sm-10">
+      <textarea rows="8" cols="20" ng-model="comm" class="form-control" id="comm" placeholder="Enter your comments..."></textarea><br>
+    </div><br><br>
+  </div>
+
+<a href="#" ng-disabled="!name || !email || !comm" class=" btn btn-success form-control">Submit Feedback <span class="glyphicon glyphicon-ok"></span></a>
+     <br><br> </div>
+</center><br><br><br>
+<div class="alert alert-success alert-dismissible" id="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Form submitted successfully!</div>
+<div class="alert alert-danger alert-dismissible" id="alert2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Complete all the details!</div>
+<br><br>
+<br><br><center>
+<a href="#" id="pp" data-toggle="tooltip" data-placement="top" title="Yay !!! You've completed 80% :)">See your progress <span class="glyphicon glyphicon-check"></span></a>
+
+<div style="width:90%">
+<div class="progress" id="dd">
+  <div class="progress-bar progress-bar-striped progress-bar-success active" role="progressbar" style="width:80%">
+    80%
+  </div></div></div></center>
+<br><br>
+<center><div class="pagination">
+<ul class="pagination">
+  <li><a href="pg1.html">1</a></li>
+  <li><a href="pg2.html">2</a></li>
+  <li><a href="pg3.html">3</a></li>
+  <li class="active"><a href="#">4</a></li>
+  <li><a href="pg5.html">5</a></li>
+</ul></div></center>
+</body>
+</html>               

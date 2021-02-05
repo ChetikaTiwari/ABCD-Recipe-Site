@@ -1,0 +1,172 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<title>Shahi Kheer</title>
+<script>
+function abc()
+{window.alert("Thankyou for your feedback!");}
+</script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<script>
+$(document).ready(function(){
+$('#button').click(function()
+{$('#ff').toggle('fast');
+});
+$('h1').mouseenter(function()
+{$(this).css({"backgroundColor":"pink"});
+});
+$('h1').mouseleave(function()
+{$(this).css({"backgroundColor":"lightYellow"});
+});
+$('pre').mouseenter(function()
+{$(this).css({"backgroundColor":"violet"});
+});
+$('pre').mouseleave(function()
+{$(this).css({"backgroundColor":"white"});
+});
+$('#img').mouseenter(function(){
+$(this).css({"border":" 5px solid hotpink"});
+});
+$('#img').click(function(){
+$(this).animate({width:'+=50px',height:'+=50px'});
+});
+$('#pp').hover(function(){
+$('#dd').show('slow');
+});
+$('.form-control').mouseenter(function(){
+$(this).css({'backgroundColor':'lightblue'});
+});
+$('.form-control').mouseleave(function(){
+$(this).css({'backgroundColor':'LemonChiffon '});
+});
+});
+</script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
+</script>
+<style>
+#ff{width:80%; background-color:orange; display:none; border:brown 8px double;}
+body{background-color:lightYellow;}
+#dd{display:none;}
+#ff{display:none;}
+#alert{display:none;}
+#alert2{display:none;}
+</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<h2><span class="label label-success">{{theTime}}</span></h2>
+<div class="jumbotron">
+<h1><marquee direction="left"><b><u>PHOOL MAKHANA KHEER:SHAHI KHEER-Dessert For Fast</b></u></h1></marquee></div>
+<img src="http://www.milkmaid.in/Images/Recipe/49-Makhana%20Kheer.jpg" alt="Makhana Kheer" width="350" height="200" border="3 black" id="img" class="img-circle">
+<br><br>
+<pre><u><b>What does it taste like?</b></u>
+     =>Sweet, soft and chewy, giving you perfect delight after a sumptuous meal. The addition of jaggery gives it a distinct aroma, making it even more delicious 
+          to taste.</pre>
+<pre><u><b>Ingredients:</b></u>
+          1 cup makhana
+          2 cups milk
+          powdered green cardamom
+          cashews,raisins and pistachios
+          sugar
+          saffron
+          ghee</pre>
+<pre><u><b>Method of Preparation:</b></u>
+
+          A) Roasting makhane and cashews -
+               1. Heat 2-3 tbsp ghee in pan andd add phool makhane and cashews.
+               2. Roast makhane in ghee till they become crunchy and cashews turn golden.
+               3. Put the roasted makhane and cashews in a plate and keep it aside.
+
+          B) Making kheer -
+               1. Heat 500ml of milk in a saucepan and stir at intervals. Let the milk boil.
+               2. Whilst the milk is getting heated, reserve 1/3 cup makhane and grind the remaining. Add cardamom seeds along with a pinch of saffron strands.   
+               3. Grind to fine powder. when the milk begins to boil, then add sugar as per taste.
+               4. Add the powdered makhane and the 1/3 reserved cup. Stir well. 
+               5. Simmer till the milk thickens a bit, for about 9-10 minutes on a low to medium flame.
+               6. Scrape the evaporated milk solids and add the roasted cashews and raisins.
+               7. Stir and simmer the kheer for a minute. Serve hot or chilled, as per taste with garnished pistachios.</pre>
+<pre><b>Preparation Time:</b> 15 minutes
+    <b>Cooking Time:</b> 20 minutes
+          <b>Serves:</b> 2-3</pre>
+<div class="btn-group">
+  <button type="button" class="btn btn-success" id="button">Feedback <span class="glyphicon glyphicon-pencil"></span></button>
+  
+  <div class="btn-group">
+    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+    Go to <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="contents.html">Contents <span class="glyphicon glyphicon-th-list"></span></a></li>
+      <li><a href="login.html">Login page <span class="glyphicon glyphicon-log-in"></span></a></li>
+<li><a href="form.html">Subsciption page <span class="glyphicon glyphicon-bell"></span></a></li>
+    </ul>
+  </div>
+</div><br>
+<center><br><br>
+
+<div class="container" id="ff">
+<div class="form-group">
+<h1><u><b>Feedback Form</b></u></h1>
+<br>
+    <label class="control-label col-sm-2" for="name">Full Name: <span class="glyphicon glyphicon-pencil"></span></label>
+    <div class="col-sm-10">
+      <input type="text" ng-model="name" class="form-control" id="name" placeholder="Enter full name">
+    </div>
+  </div><br><br>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email: <span class="glyphicon glyphicon-envelope"></span></label>
+    <div class="col-sm-10">
+      <input type="email" ng-model="email" class="form-control" id="email" placeholder="Enter email">
+    </div><br><br>
+  </div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="name">Upload a file: <span class="glyphicon glyphicon-upload"></span></label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" id="file">
+    </div>
+  </div><br><br>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="comments">Enter comments: <span class="glyphicon glyphicon-comment"></span></label>
+    <div class="col-sm-10">
+      <textarea rows="8" cols="20" ng-model="comm" class="form-control" id="comm" placeholder="Enter your comments..."></textarea><br>
+    </div><br><br>
+  </div>
+
+<a href="#" ng-disabled="!name || !email || !comm" class=" btn btn-success form-control">Submit Feedback <span class="glyphicon glyphicon-ok"></span></a>
+   <br><br>   </div></center><br><br><br>
+<div class="alert alert-success alert-dismissible" id="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Form submitted successfully!</div>
+<div class="alert alert-danger alert-dismissible" id="alert2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Complete all the details!</div>
+<br><br><center>
+<a href="#" id="pp" data-toggle="tooltip" data-placement="top" title="Yay !!! You've completed 40% :)">See your progress <span class="glyphicon glyphicon-check"></span></a>
+
+<div style="width:90%">
+<div class="progress" id="dd">
+  <div class="progress-bar progress-bar-striped progress-bar-success active" role="progressbar" style="width:40%">
+    40%
+  </div></div></div></center>
+<br><br>
+<center><div class="pagination">
+<ul class="pagination">
+  <li><a href="pg1.html">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+  <li><a href="pg3.html">3</a></li>
+  <li><a href="pg4.html">4</a></li>
+  <li><a href="pg5.html">5</a></li>
+</ul></div></center>
+</body>
+</html>

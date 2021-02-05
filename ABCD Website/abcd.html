@@ -1,0 +1,95 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<title>ABCD</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico"> 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
+</script>
+<style>
+.abc{text-color:red; text-size:50; font-family:calibri;}
+#xyz{font-size:80px; color:pink;}
+#pp{font-size:50px;color:#DAF7A6;font-weight:bold;}
+#quote{color:lightblue;
+              font-weight:bold;
+                font-size:50px;}
+body{background-image:url(https://t4.ftcdn.net/jpg/01/99/96/65/240_F_199966513_L7UifOCQRBQomBRPDinIfA56eyKXeUJp.jpg);
+           background-repeat:no-repeat;
+            background-size:cover;}
+</style>
+<script>
+$(document).ready(function(){
+$('#xyz').mouseenter(function(){
+$(this).css({'color':'tomato '});
+});
+$('#xyz').mouseleave(function(){
+$(this).css({'color':'pink'});
+});
+$('#quote').mouseenter(function(){
+$(this).css({'color':'white'});
+});
+$('#quote').mouseleave(function(){
+$(this).css({'color':'orange'});
+});
+$('#pp').mouseenter(function(){
+$(this).css({'color':'pink'});
+});
+$('#pp').mouseleave(function(){
+$(this).css({'color':'lightgreen'});
+});
+$('#11').mouseenter(function(){
+$(this).css({'backgroundColor':'#DAF7A6'});
+});
+$('#22').mouseenter(function(){
+$(this).css({'backgroundColor':'pink'});
+});
+});
+</script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+        <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home <span class="glyphicon glyphicon-home"></span></a></li>
+     <li><a href="contents.html">Contents <span class="glyphicon glyphicon-th-list"></span></a></li>
+      <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us:<span class="glyphicon glyphicon-phone"><span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li id="11"><a href="#">9883560335</a></li>
+      <li id="22"><a href="#">9104556783</a></li>
+      </ul>
+  </li>
+       
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><p style="color:white;">{{theTime}}</p></a></li>
+      <li><a href="form.html">Subscribe:<span class="glyphicon glyphicon-user"></span></a></li>
+      <li><a href="login.html"> Login:<span class="glyphicon glyphicon-log-in"></span></a></li>
+    </ul>
+  </div>
+</nav>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center>
+<mark><em><b><p id="xyz"><u><marquee direction="left"><u>ABCD:ALL BOUT COOKING DESSERTS</u></marquee></u></p></b></em></mark>
+<p id="quote">The ultimate guide to cook like professionals and raise 
+your daily and ordinary sweetdishes to extraordinary.
+Presenting the best online cookbook of the year. All the sweet tooths, get 
+ready to savor your taste buds!! :)</p>
+<p id="pp">Recipes are important, but only to a point. What's more important than these recipes, is how we think about food and this cookbook should open up a new way of doing just that.... :) :> :D
+</p>
+
+
+</body>
+</html>

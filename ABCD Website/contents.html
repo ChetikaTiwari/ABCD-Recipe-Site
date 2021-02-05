@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contents</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
+</script>
+<script>
+$(document).ready(function()
+{$('tr:even').mouseenter(function()
+{$(this).css({backgroundColor:"deeppink"});
+});
+$('tr:even').mouseleave(function()
+{$(this).css({backgroundColor:"darkorange"});
+});
+$('h1').mouseenter(function()
+{$(this).css({backgroundColor:"deeppink",color:"white"});
+});
+$('h1').mouseleave(function()
+{$(this).css({backgroundColor:"lightgreen",color:"red"});
+});
+$('tr:odd').mouseover(function()
+{$(this).css({backgroundColor:"chartreuse"});
+});
+$('tr:odd').mouseleave(function()
+{$(this).css({backgroundColor:"yellow"});
+});
+$('th').mouseenter(function()
+{$(this).css({backgroundColor:"violet"});
+});
+$('#11').mouseenter(function(){
+$(this).css({'backgroundColor':'#DAF7A6'});
+});
+$('#22').mouseenter(function(){
+$(this).css({'backgroundColor':'pink'});
+});
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#ii").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#tb tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<style>
+#jj{background-color:aqua; border:dotted 5px blue;}
+.table{border:brown 6px dotted; width:80%;}
+</style>
+</head>
+
+<body background="https://image.freepik.com/free-vector/desserts-background_1067-57.jpg" ng-app="myApp" ng-controller="myCtrl">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid" ng-app="myApp" ng-controller="myCtrl">
+        <ul class="nav navbar-nav">
+      <li><a href="abcd.html" target="_blank">Home <span class="glyphicon glyphicon-home"></span></a></li>
+     <li class="active"><a href="contents.html" target="_blank">Contents <span class="glyphicon glyphicon-th-list"></span></a></li>
+      <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us:<span class="glyphicon glyphicon-phone"><span class="caret"></span></a>
+<ul class="dropdown-menu">
+      <li id="11"><a href="#">9883560335</a></li>
+      <li id="22"><a href="#">9104556783</a></li>
+      </ul>
+  </li>
+       
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><p style="color:white;">{{theTime}}</p></a></li>
+      <li><a href="form.html" target="_blank">Subscribe:<span class="glyphicon glyphicon-user"></span></a></li>
+      <li><a href="login.html" target="_blank"> Login:<span class="glyphicon glyphicon-log-in"></span></a></li>
+    </ul>
+  </div>
+</nav>
+<br><br><br><br><br>
+<div class="container">
+<div class="jumbotron" id="jj"><h1><u><b>Contents</b></u></h1></div>
+<h2><span class="label label-danger">Move your mouse below the searchbar to see the table appear magically ;)</span></h2><br>
+<div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input class="form-control" id="ii" type="text" placeholder="Search for your recipes here..."></div>
+<br>
+<center>
+  <table class="table table-bordered table-responsive">
+    <thead>
+      <tr><th>Recipe No.</th><th>Name of the Dish</th></tr>
+    </thead>
+    <tbody id="tb">
+      <tr><td>1</td><td><a href="pg1.html" target="_blank">Mango Halwa</a></td></tr>
+      <tr><td>2</td><td><a href="pg2.html" target="_blank">Phool Makhana Shahi Kheer</a></td></tr>
+      <tr><td>3</td><td><a href="pg3.html" target="_blank">Rabdi Motichoor Laddoo Shots</a></td></tr>
+      <tr><td>4</td><td><a href="pg4.html" target="_blank">Strawberry Tart</a></td></tr>
+      <tr><td>5</td><td><a href="pg5.html" target="_blank">Red Velvet Cupcake</a></td></tr>
+    </tbody>
+  </table>
+</center>
+</div>
+</body>
+</html>

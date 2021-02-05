@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Mango Halwa</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style>
+body{background-color:#F4D03F;}
+#dd{display:none; width:90%}
+#ff{width:80%; background-color:orange; display:none; border:brown 8px double;}
+#alert{display:none;}
+#dp{display:none;}
+#alert2{display:none;}
+</style>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+<script>
+$(document).ready(function(){
+$('#button').click(function()
+{$('#ff').toggle('fast');
+});
+$('#hh').mouseenter(function()
+{$(this).css({"backgroundColor":"tomato"});
+});
+$('#hh').mouseleave(function()
+{$(this).css({"backgroundColor":"#F4D03F"});
+});
+$('pre').mouseenter(function()
+{$(this).css({"backgroundColor":"lightGreen"});
+});
+$('pre').mouseleave(function()
+{$(this).css({"backgroundColor":"white"});
+});
+$('#img').mouseenter(function(){
+$(this).css({"border":" 5px solid brown"});
+});
+$('#img').click(function(){
+$(this).animate({width:'+=50px',height:'+=50px'});
+});
+$('#pp').hover(function(){
+$('#dp').show('slow');
+});
+$('input').mouseenter(function(){
+$(this).css({'backgroundColor':'lightBlue'});
+});
+$('input').mouseleave(function(){
+$(this).css({'backgroundColor':'white'});
+});
+$('form').hover(function(){
+$(this).css({'border':'solid brown 5px'});
+});
+$('#dd').hover(function(){
+$(this).css({'border':'solid purple 5px'});
+});
+$('.form-control').mouseenter(function(){
+$(this).css({'backgroundColor':'lightblue'});
+});
+$('.form-control').mouseleave(function(){
+$(this).css({'backgroundColor':'LemonChiffon '});
+});
+});
+</script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
+</script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+<h2><span class="label label-danger">{{theTime}}</span></h2>
+<div class="jumbotron">
+<h1 id="hh"><marquee direction="left"><b>MANGO HALWA: A Delicious Pulpy Dessert</b></marquee></h1></div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bsD85P119_ovZGEQE-0wvipAM76Ocn0RG3cC62jDPfo42vXx" float="right" alt="mango halwa" width="250"height="200" border="3 black" class="img-circle" id="img">
+<br><br><pre><u><b>What does it taste like?</b></u>
+      =>Soft and spongy, with the sweet pulpy taste of mango urging you to seek for more.</pre>
+<pre><u><b>Ingredients:</b></u>
+          Mango Puree or Pulp 1.5 cup
+          Cornflour / Cornstarch 1/2 cup
+          Water 1/2 cup
+          Sugar 3/4 cup
+          Cardamom Powder / Yelakai Podi 2 pods crushed
+          Nuts 1/4 cup (cashews, badam, walnuts, pista)
+          Ghee 5 tblspn</pre>	
+<pre><u><b>Method of Preparation:</b></u>
+         1. Grease a pan in which you are going to set the halwa well with ghee and set aside.
+         2. Now take cornflour in a bowl, add in water and mix well. 
+         3. Now heat 2 tbsp ghee in a kadai, add in mango pulp and cook this for 3 to 4 mins.
+         4. Now add in the cornflour mix and mix well. Add in sugar and keep mixing, it will thicken up.
+         5. Now start adding 1 tblspn of ghee and keep cooking, it will turn glossy and at one stage it will start to leave the sides of the pan. 
+         6. Add in cardamom powder and nuts. Mix well.
+         7. Pour this into the pan and set aside to cool down for couple of hours
+         8. Now cut it into squares and enjoy.
+         9. Store in fridge and serve chilled.</pre>
+
+<pre><b>Preparation Time :</b> 10 mins
+    <b>Cooking Time :</b> 20 to 25 mins
+            <b>Makes:</b> 9 big pieces</pre>
+<div class="btn-group">
+  <button type="button" class="btn btn-success" id="button">Feedback <span class="glyphicon glyphicon-pencil"></span></button>
+  
+  <div class="btn-group">
+    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+    Go to <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="contents.html">Contents <span class="glyphicon glyphicon-th-list"></span></a></li>
+      <li><a href="login.html">Login page <span class="glyphicon glyphicon-log-in"></span></a></li>
+      <li><a href="form.html">Subsciption page <span class="glyphicon glyphicon-bell"></span></a></li>
+    </ul>
+  </div>
+</div>
+<center><br><br>
+<div class="container" id="ff">
+<div class="form-group">
+<h1><u><b>Feedback Form</b></u></h1>
+<br>
+    <label class="control-label col-sm-2" for="name">Full Name: <span class="glyphicon glyphicon-pencil"></span></label>
+    <div class="col-sm-10">
+      <input type="text" ng-model="name" class="form-control" id="name" placeholder="Enter full name">
+    </div>
+  </div><br><br>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email: <span class="glyphicon glyphicon-envelope"></span></label>
+    <div class="col-sm-10">
+      <input type="email" ng-model="email" class="form-control" id="email" placeholder="Enter email">
+    </div><br><br>
+  </div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="name">Upload a file: <span class="glyphicon glyphicon-upload"></span></label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" id="file">
+    </div>
+  </div><br><br>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="comments">Enter comments: <span class="glyphicon glyphicon-comment"></span></label>
+    <div class="col-sm-10">
+      <textarea rows="8" cols="20" ng-model="comm" class="form-control" id="comm" placeholder="Enter your comments..."></textarea><br>
+    </div><br><br>
+  </div>
+
+<a href="#" ng-disabled="!name || !email || !comm" class=" btn btn-success form-control">Submit Feedback <span class="glyphicon glyphicon-ok"></span></a>
+<br><br>
+      </div></center><br><br><br>
+
+<div class="alert alert-success alert-dismissible" id="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Form submitted successfully!</div>
+<div class="alert alert-danger alert-dismissible" id="alert2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Complete all the details!</div>
+<br><br>
+<center>
+<a href="#" id="pp" data-toggle="tooltip" data-placement="top" title="Yay !!! You've completed 20% :)">See your progress <span class="glyphicon glyphicon-check"></span></a>
+<div class='progress' id="dp"><div class='progress-bar progress-bar-striped progress-bar-success active' role='progressbar' style='width:20%'>20%</div></div>
+</div>
+</center>
+
+<br><center><div class="pagination">
+<ul class="pagination">
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="pg2.html">2</a></li>
+  <li><a href="pg3.html">3</a></li>
+  <li><a href="pg4.html">4</a></li>
+  <li><a href="pg5.html">5</a></li>
+</ul></div>
+</center>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<style>
+h2{color:purple;}
+table{color:brown;}
+form{background-color:pink;}
+#dd{background-color:#ffccff;}
+#alert{display:none;}
+</style>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+$(document).ready(function()
+{$('button').click(function()
+{var c=$('#name').val();
+var d=$('#lname').val();
+var e=$('#contact').val();
+var f=$('#email').val();
+if(c==0 || d==0 || e==0 || f==0)
+{$('#alert2').show();}
+else
+{$('#alert').show();}
+});	
+
+$('h2').mouseenter(function(){
+$(this).css({'color':'green'});
+});
+$('h2').mouseleave(function(){
+$(this).css({'color':'black'})});
+$('h3').mouseenter(function(){
+$(this).css({'color':'orange'});
+});
+$('h3').mouseleave(function(){
+$(this).css({'color':'black'})
+});
+$('input').mouseenter(function(){
+$(this).css({'backgroundColor':'lightBlue'});
+});
+$('input').mouseleave(function(){
+$(this).css({'backgroundColor':'white'});
+});
+$('form').hover(function(){
+$(this).css({'border':'solid brown 5px'});
+});
+$('#dd').hover(function(){
+$(this).css({'border':'solid purple 5px'});
+});
+$('#11').mouseenter(function(){
+$(this).css({'backgroundColor':'#DAF7A6'});
+});
+$('#22').mouseenter(function(){
+$(this).css({'backgroundColor':'pink'});
+});
+});
+</script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
+</script>
+</head>
+<body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl6VHe7J5m2QQcGPHdA57jhWgKMc1Z4N62YPEswN6ZjgOjc2Qk">
+<center>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+        <ul class="nav navbar-nav">
+      <li><a href="abcd.html">Home <span class="glyphicon glyphicon-home"></span></a></li>
+   <li><a href="contents.html">Contents <span class="glyphicon glyphicon-th-list"></span></a></li>
+
+      <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us:<span class="glyphicon glyphicon-phone"><span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li id="11"><a href="#">9883560335</a></li>
+      <li id="22"><a href="#">9104556783</a></li>
+      </ul>
+  </li>
+       
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+	<li ng-app="myApp" ng-controller="myCtrl"><h4 style="color:white;">{{theTime}}</h4></li>
+      <li class="active"><a href="#">Subscribe:<span class="glyphicon glyphicon-user"></span></a></li>
+      <li><a href="login.html"> Login:<span class="glyphicon glyphicon-log-in"></span></a></li>
+    </ul>
+  </div>
+</nav><center>
+<br><br><br><br><br>
+<div class="container" id="dd" style="width:60%" ><h2><b><u>Subscribe To Our Cookbook: <span class="glyphicon glyphicon-check"></span></u></b></h2>
+<h3>Sign up to recieve any updates and our other cookbooks. <span class="glyphicon glyphicon-bell"></span></h3></div>
+<form class="form-horizontal" style="height:250px;width:858px;" id="div">
+<div class="form-group">
+<br>
+    <label class="control-label col-sm-2" for="name">First name: <span class="glyphicon glyphicon-pencil"></span></label>
+    <div class="col-sm-10">
+      <input type="text" ng-model="fname" class="form-control" id="name" placeholder="Enter firstname">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="name">Last name: <span class="glyphicon glyphicon-pencil"></span></label>
+    <div class="col-sm-10">
+      <input type="text" ng-model="lname" class="form-control" id="lname" placeholder="Enter lastname">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="contact">Contact: <span class="glyphicon glyphicon-phone"></span></label>
+    <div class="col-sm-10">
+      <input type="number" ng-model="contact" class="form-control" id="contact" placeholder="Enter contact">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email: <span class="glyphicon glyphicon-envelope"></span></label>
+    <div class="col-sm-10">
+      <input type="email" ng-model="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+  </div>
+      </form></center><br>
+<center>      <button type="submit" ng-disabled="!fname || !lname || !contact || !email" class="btn btn-success">Submit <span class="glyphicon glyphicon-ok"></span></button>
+</center><br>
+<div class="alert alert-success alert-dismissible" id="alert" style="display:none;">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+ <strong>Congratulations on your membership!!!</strong> Form submitted successfully! </div>
+<div class="alert alert-danger alert-dismissible" id="alert2" style="display:none;">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  Complete all the details!</div>
+<br><br><br><br>
+<center><div>
+<ul class="pagination">
+<li><a href="pg1.html">1</a></li>
+<li><a href="pg2.html">2</a></li>
+<li><a href="pg3.html">3</a></li>
+<li><a href="pg4.html">4</a></li>
+<li><a href="pg5.html">5</a></li>
+</ul></div>
+</center>
+
+</body>
+</html>

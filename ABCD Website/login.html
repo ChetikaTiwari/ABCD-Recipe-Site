@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
+</script>
+  <script>
+  $(document).ready(function(){
+$('input').hover(function(){
+$(this).css({'backgroundColor':'pink'});
+});
+$('input').mouseleave(function(){
+$(this).css({'backgroundColor':'white'});
+});
+$('#h').mouseenter(function(){
+$(this).css({'color':'white ','fontSize':'124px'});
+});
+$('#h1').hover(function(){
+$(this).css({'color':'orange'});
+});
+});
+</script>
+<style>
+.item{border:10px white dotted;}
+
+</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl" style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiaamirPqpMFf4yOmInn8Zj9cnoG_9V4_v55esbwnCO5HRmNSpTA)">
+
+<div class="container">
+<h2><span class="label label-warning">{{theTime}}</span></h2>
+<center><h1 style="color:pink;font-size:80px;" id="h"><i>ABCD</i></h1>
+<marquee direction="left"><h2 style="color:lightblue;font-size:60px;" id="h1"><i>All Bout Cooking Desserts!</i></h2></marquee></center>
+<br><br><br>
+<div class="col-md-6" style="background-color:lightblue;border:double orange 14px;">
+<div class="form-group-horizontal" style="height:450px;" id="d1">
+<br><br><br>
+<div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input id="username" ng-model="name" type="text" class="form-control" name="email" placeholder="username">
+  </div><br><br>
+  <center><div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input id="password" ng-model="pass" type="password" class="form-control" name="password" placeholder="Password">
+  </div></center>
+<br><br><br><br><br><center>
+<div class="input-group">
+<a href="abcd.html" ng-disabled="!name || !pass" class=" btn btn-success form-control">Login<span class="glyphicon glyphicon-log-in"></span></a>
+
+</div>
+<br><br>
+<center>
+<div class="input-group"><h5><p>New here? Create your own <strong>account</strong> now!</p></h5>
+<a href="form.html" class="btn btn-danger">Sign Up:<span class="glyphicon glyphicon-log-in"></span></a>
+</div>
+</center>
+ </div>
+</div>
+<div class="col-md-6" style="height:480px;" id="d2">
+<div id="cc" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+    <li data-target="#cc" data-slide-to="0" class="active"></li>
+    <li data-target="#cc" data-slide-to="1"></li>
+    <li data-target="#cc" data-slide-to="2"></li>
+   <li data-target="#cc" data-slide-to="3"></li>
+<li data-target="#cc" data-slide-to="4"></li>  </ol>
+
+  
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bsD85P119_ovZGEQE-0wvipAM76Ocn0RG3cC62jDPfo42vXx" float="right" alt="mango halwa" style="height:450px">
+      <div class="carousel-caption">
+        <h3>Mango Halwa</h3>
+        <p>A delicious pulpy desert!</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="http://www.milkmaid.in/Images/Recipe/49-Makhana%20Kheer.jpg" style="height:450px">
+      <div class="carousel-caption">
+        <h3>PHOOL MAKHANA KHEER</h3>
+        <p>Dessert For Fast!</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="http://indraniskitchenflavours.com/wp-content/uploads/2016/10/Rabdi-motichur-ladoo-parfait.jpg" alt="Rabdi Laddoo Shots" style="height:450px">
+      <div class="carousel-caption">
+        <h3>RABDI MOTICHOOR LADDOO SHOTS</h3>
+        <p>Fusion Dessert!</p>
+      </div>
+    </div>
+ <div class="item">
+      <img src="https://cdn-image.myrecipes.com/sites/default/files/styles/medium_2x/public/image/recipes/su/10/04/strawberry-tart-su-x.jpg?itok=hHRqTErK" style="height:450px">
+      <div class="carousel-caption">
+        <h3>BROWN SUGAR STRAWBERRY TART</h3>
+        <p>Creamy strawberry with yummy brown sugar!</p>
+      </div>
+    </div>
+   <div class="item">
+      <img src="https://www.browneyedbaker.com/wp-content/uploads/2010/11/red-velvet-cupcakes-61-600.jpg" alt="Red Velvet Cupcake"  style="height:450px">
+      <div class="carousel-caption">
+        <h3>RED VELVET CUPCAKE</h3>
+        <p>All time favourite eggless dessert!</p>
+      </div>
+    </div>
+  </div>
+
+  <a class="left carousel-control" href="#cc" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#cc" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div><br><br>
+</div>
+</div>
+</body>
+</html>

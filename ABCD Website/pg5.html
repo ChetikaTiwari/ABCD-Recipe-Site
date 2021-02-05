@@ -1,0 +1,191 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<title>Red Velvet Cupcake</title>
+<script>
+function abc()
+{window.alert("Thankyou for your feedback!");}
+</script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+$(document).ready(function(){
+$('#button').click(function()
+{$('#ff').toggle('fast');
+});
+
+$('h1').mouseenter(function()
+{$(this).css({"backgroundColor":"pink"});
+});
+$('h1').mouseleave(function()
+{$(this).css({"backgroundColor":"aqua"});
+});
+$('pre').mouseenter(function()
+{$(this).css({"backgroundColor":"aqua"});
+});
+$('pre').mouseleave(function()
+{$(this).css({"backgroundColor":"white"});
+});
+$('#img').mouseenter(function(){
+$(this).css({"border":" 5px solid red"});
+});
+$('#img').click(function(){
+$(this).animate({width:'+=50px',height:'+=50px'});
+});
+$('#pp').hover(function(){
+$('#dd').show('slow');
+$('#aa').show('slow');
+});
+$('.form-control').mouseenter(function(){
+$(this).css({'backgroundColor':'lightblue'});
+});
+$('.form-control').mouseleave(function(){
+$(this).css({'backgroundColor':'LemonChiffon '});
+});
+});
+</script>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
+</script>
+<style>
+body{background-color:#DAF7A6;}
+#dd{display:none;}
+#aa{display:none;}
+#ff{width:80%; background-color:orange; display:none; border:brown 8px double;}
+#alert{display:none;}
+#alert2{display:none;}
+</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<h2><span class="label label-danger">{{theTime}}</span></h2>
+<div class="jumbotron">
+<h1><marquee direction="left">RED VELVET CUPCAKE:ALL TIME FAVOURITE EGGLESS DESSERT</marquee></h1></div>
+<img src="https://www.browneyedbaker.com/wp-content/uploads/2010/11/red-velvet-cupcakes-61-600.jpg" alt="Red Velvet Cupcake" width="200"
+height="250" border="3 black" id="img" class="img-rounded">
+<br><br>
+<pre><u><b>What does it taste like:</b></u>
+                   =>These Easy Eggless Red Velvet Cupcakes are tender, light, and moist and delicious all at once!! They are super easy to whip up for your next 
+                     get-together. Perfect for crowded birthday parties and school celebrations.</pre>
+<pre id="abc"><u><b>Ingredients</u></b>
+                        A) Cupcakes:
+                             1 cups (175 gram) self-rising flour
+                             cup (26 gr) unsweetened cocoa powder
+                             1 cup (200 gr) sugar
+                             1/2 cup (113.4 gr) unsalted butter ,softened 
+                             1 tablespoon (15 ml) vegetable or canola oil
+                             1 teaspoon (5 ml) vanilla extract
+                             1 cup (240 ml) whole milk 
+                             1 tablespoon (5 ml) apple cider vinegar
+                             2 teaspoons (10 ml) red food color 
+                        B) Cream Cheese Frosting:
+                             226 gram cream cheese (softened)
+                             1 cup (113.4 gr) unsalted butter ,softened
+                             Pinch of kosher salt
+                             2 teaspoons (10 ml)pure vanilla extract
+                             4 cups (560 gr) confectioners' sugar (more if needed according to taste)</pre>
+<pre><u><b>Method of Preparation</u></b>
+
+                       A) Cupcakes:
+                            1. Preheat oven to 350F. Line the cupcake pans with liners and lightly spray them with cooking spray.
+                            2. Combine flour and cocoa powder in a bowl. Set aside.
+                            3. In the bowl of your stand mixer fitted with paddle attachment mix beat together butter and sugar until smooth on medium speed. Once 
+                                smooth, add oil and vanilla and mix until well combined. Add milk and vinegar. Add the food coloring and keep mixing until well combined.
+                            4. Add the flour mixture; mix just until combined. Please do not overmix.
+                            5. Divide batter evenly among liners, about three-quarters full each.
+                            6. Bake for 18 - 22 minutes on the same shelf, or until a toothpick inserted into the center comes out clean.
+                            7. Let it rest for 5 minutes in the pan then turn out onto a cooling rack and allow to cool completely before frosting.
+
+                      B) Frosting:
+                            1. Beat in a large bowl with an electric mixer the softened cream cheese and butter on medium speed for 3 - 4 minutes, scraping bowl 
+                                occasionally, until smooth and creamy.
+                            2. Stir in salt and vanilla, then stir in confectioners' sugar. Add more confectioners' sugar as needed until frosting is a thick spreadable 
+                                consistency. If it's too thick you can add a 1 tablespoon of milk. If it's too thin you can add more confectioners' sugar.</pre>
+<pre><b>Preparation Time:</b> 10 minutes
+    <b>Cooking Time:</b> 20 minutes
+          <b>Serves:</b> 16 cupcakes</pre>
+<div class="btn-group">
+  <button type="button" class="btn btn-success" id="button">Feedback <span class="glyphicon glyphicon-pencil"></span></button>
+  
+  <div class="btn-group">
+    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+    Go to <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="contents.html">Contents <span class="glyphicon glyphicon-th-list"></span></a></li>
+      <li><a href="login.html">Login page <span class="glyphicon glyphicon-log-in"></span></a></li>
+<li><a href="form.html">Subsciption page <span class="glyphicon glyphicon-bell"></span></a></li>
+    </ul>
+  </div>
+</div>
+<center>
+<br><br>
+<div class="container" id="ff">
+<div class="form-group">
+<h1><u><b>Feedback Form</b></u></h1>
+<br>
+    <label class="control-label col-sm-2" for="name">Full Name: <span class="glyphicon glyphicon-pencil"></span></label>
+    <div class="col-sm-10">
+      <input type="text" ng-model="name" class="form-control" id="name" placeholder="Enter full name">
+    </div>
+  </div><br><br>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email: <span class="glyphicon glyphicon-envelope"></span></label>
+    <div class="col-sm-10">
+      <input type="email" ng-model="email" class="form-control" id="email" placeholder="Enter email">
+    </div><br><br>
+  </div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="name">Upload a file: <span class="glyphicon glyphicon-upload"></span></label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" id="file">
+    </div>
+  </div><br><br>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="comments">Enter comments: <span class="glyphicon glyphicon-comment"></span></label>
+    <div class="col-sm-10">
+      <textarea rows="8" cols="20" ng-model="comm" class="form-control" id="comm" placeholder="Enter your comments..."></textarea><br>
+    </div><br><br>
+  </div>
+
+<a href="#" ng-disabled="!name || !email || !comm" class=" btn btn-success form-control">Submit Feedback <span class="glyphicon glyphicon-ok"></span></a>
+     <br><br> </div></center><br><br><br>
+
+<div class="alert alert-success alert-dismissible" id="alert"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Form submitted successfully!</div>
+<div class="alert alert-danger alert-dismissible" id="alert2"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Complete all the details!</div>
+<br><br>
+</center>
+<br><br><center>
+<a href="#" id="pp" data-toggle="tooltip" data-placement="top" title="Yay !!! You've completed 100% :)">See your progress <span class="glyphicon glyphicon-check"></span></a>
+<div style="width:90%">
+<div class="progress" id="dd">
+  <div class="progress-bar progress-bar-striped progress-bar-success active" role="progressbar" style="width:100%">
+    100%
+  </div></div>
+<div class="alert alert-success" id="aa"><strong>Congratulations!!!</strong> You've reached the end of the cookbook! :)</div>
+</div></center>
+<br><br>
+<center><div class="pagination">
+<ul class="pagination">
+  <li><a href="pg1.html">1</a></li>
+  <li><a href="pg2.html">2</a></li>
+  <li><a href="pg3.html">3</a></li>
+  <li><a href="pg4.html">4</a></li>
+  <li class="active"><a href="#">5</a></li>
+</ul></div></center>
+</body>
+</html>                                     
+
